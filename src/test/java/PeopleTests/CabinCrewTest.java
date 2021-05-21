@@ -34,4 +34,9 @@ public class CabinCrewTest {
     public void canWarnPassengers() {
         assertEquals("Please be careful on the steps as you alight from the aircraft, it has been raining", flightAttendant.alightWarning());
     }
+
+    @Test
+    public void canSellScratchCards() {
+        assertEquals("Scratchcards, 5 Euros for 3!", flightAttendant.sellScratchys());
+    }
 }
