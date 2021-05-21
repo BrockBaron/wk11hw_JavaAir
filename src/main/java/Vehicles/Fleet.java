@@ -18,4 +18,20 @@ public enum Fleet {
         this.paxCap = paxCap;
         this.luggageCap = luggageCap;
     }
+
+    public String getPropulsionType() {
+        return propulsionType;
+    }
+
+    public int getCrewCap() {
+        return crewCap;
+    }
+
+    public int getPaxCap() {
+        return paxCap;
+    }
+
+    public double getLuggageCap() {
+        return luggageCap;
+    }
 }
