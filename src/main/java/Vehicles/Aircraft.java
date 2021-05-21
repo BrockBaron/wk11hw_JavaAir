@@ -12,7 +12,15 @@ public class Aircraft {
         return fleet;
     }
 
-    public Fleet getPropulsionType() {
+    public Fleet getFleetType() {
         return this.fleet;
+    }
+
+    public String getPropulsionType() {
+        return this.fleet.getPropulsionType();
+    }
+
+    public int getCrewCapacity() {
+        return this.fleet.getCrewCap();
     }
 }

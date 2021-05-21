@@ -26,7 +26,25 @@ public class AircraftTest {
 
 
     @Test
-    public void canGetPropulsionType() {
-        assertEquals(Fleet.BRITTENNI, aircraft.getPropulsionType());
+    public void canGetFleetType() {
+        assertEquals(Fleet.BRITTENNI, aircraft.getFleetType());
     }
+
+    @Test
+    public void aircraftHasPropulsionType() {
+        assertEquals("Jet", aircraft2.getPropulsionType());
+    }
+
+    @Test
+    public void aircraftHasCrewCapacity() {
+        assertEquals(3, aircraft1.getCrewCapacity());
+    }
+
+    @Test
+    public void aircraftHasPaxCapacity() {
+        assertEquals(29, aircraft3.getPaxCapacity());
+    }
+
+
+
 }
