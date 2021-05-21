@@ -29,4 +29,7 @@ public class Aircraft {
     }
 
 
+    public double getLuggageCapacity() {
+        return this.fleet.getLuggageCap();
+    }
 }

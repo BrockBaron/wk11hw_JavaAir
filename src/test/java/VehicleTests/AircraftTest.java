@@ -45,6 +45,8 @@ public class AircraftTest {
         assertEquals(29, aircraft3.getPaxCapacity());
     }
 
-
-
+    @Test
+    public void aircraftHasCargoCapacity() {
+        assertEquals(54.4, aircraft.getLuggageCapacity(), 0.1);
+    }
 }
