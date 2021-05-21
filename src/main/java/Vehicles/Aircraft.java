@@ -22,8 +22,12 @@ public class Aircraft {
         return this.fleet.getPropulsionType();
     }
 
-    public int getCrewCapacity() {
-        return this.fleet.getCrewCap();
+    public int getCabinCrewCapacity() {
+        return this.fleet.getCabinCrewCap();
+    }
+
+    public int getFlightCrewCapacity() {
+        return this.fleet.getFlightCrewCap();
     }
 
     public int getPaxCapacity() {

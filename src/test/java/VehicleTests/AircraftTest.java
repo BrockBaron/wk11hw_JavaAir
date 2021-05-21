@@ -34,8 +34,13 @@ public class AircraftTest {
     }
 
     @Test
-    public void aircraftHasCrewCapacity() {
-        assertEquals(3, aircraft1.getCrewCapacity());
+    public void aircraftHasCabinCrewCapacity() {
+        assertEquals(1, aircraft1.getCabinCrewCapacity());
+    }
+
+    @Test
+    public void aircraftHasFlightCrewCapacity() {
+        assertEquals(2, aircraft1.getFlightCrewCapacity());
     }
 
     @Test
