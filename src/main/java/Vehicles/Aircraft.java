@@ -23,4 +23,10 @@ public class Aircraft {
     public int getCrewCapacity() {
         return this.fleet.getCrewCap();
     }
+
+    public int getPaxCapacity() {
+        return this.fleet.getPaxCap();
+    }
+
+
 }
