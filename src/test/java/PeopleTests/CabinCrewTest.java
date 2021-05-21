@@ -26,7 +26,12 @@ public class CabinCrewTest {
     }
 
     @Test
-    public void flightCrewHasRank() {
+    public void cabinCrewHasRank() {
         assertEquals(Rank.ATTENDANT, flightAttendant.getRank());
+    }
+
+    @Test
+    public void canWarnPassengers() {
+        assertEquals("Please be careful on the steps as you alight from the aircraft, it has been raining", flightAttendant.alightWarning());
     }
 }
