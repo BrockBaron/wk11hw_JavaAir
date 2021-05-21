@@ -9,18 +9,23 @@ import static org.junit.Assert.assertEquals;
 
 public class FlightCrewTest {
 
-    private FlightCrew captain;
-    private FlightCrew firstOfficer;
+    private FlightCrew pilot;
+    private FlightCrew coPilot;
 
     @Before
     public void before() {
-        captain = new FlightCrew("Cptn. Jeffry Striker", Rank.CAPTAIN, "STRIK711269JS6XX");
-        firstOfficer = new FlightCrew("Shane Byrne", Rank.FO, "BYRNE812128SB7FE");
+        pilot = new FlightCrew("Cptn. Jeffry Striker", Rank.CAPTAIN, "STRIK711269JS6XX");
+        coPilot = new FlightCrew("Shane Byrne", Rank.FO, "BYRNE812128SB7FE");
 
     }
 
     @Test
     public void pilotHasName() {
-        assertEquals("Cptn. Jeffry Striker",captain.getName());
+        assertEquals("Cptn. Jeffry Striker",pilot.getName());
+    }
+
+    @Test
+    public void pilotHasRank() {
+        assertEquals(Rank.CAPTAIN, pilot.getRank());
     }
 }

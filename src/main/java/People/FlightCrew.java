@@ -14,6 +14,7 @@ public class FlightCrew extends Person{
     }
 
 
-
-
+    public Rank getRank() {
+        return this.rank;
+    }
 }
