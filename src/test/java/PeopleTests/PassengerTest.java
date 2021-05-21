@@ -23,12 +23,12 @@ public class PassengerTest {
 
     @Test
     public void passengerHasNoOfBags() {
-        assertEquals(2, passenger.baggegeCount());
+        assertEquals(2, passenger.baggageCount());
     }
 
     @Test
-    public void passengerBagsHaveWeight() {
-        assertEquals(18.00,passenger.baggageWeight());
+    public void passengerBagHasWeight() {
+        assertEquals(12.50,passenger.baggageWeight(), 0.1);
     }
 
 
@@ -44,6 +44,6 @@ public class PassengerTest {
 
     @Test
     public void calculatePassengerTotalBaggageWeight() {
-        assertEquals(25.00,passenger.getTotalBaggageWeight());
+        assertEquals(25.00,passenger.getTotalBaggageWeight(), 0.1);
     }
 }

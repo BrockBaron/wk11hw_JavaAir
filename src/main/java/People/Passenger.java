@@ -14,5 +14,27 @@ public class Passenger extends Person {
         this.flightNo = flightNo;
         this.seatNo = seatNo;
     }
+
+    public int baggageCount() {
+        return this.noOfBags;
+    }
+
+    public double baggageWeight() {
+        return this.weightOfEachBag;
+    }
+
+    public String getFlightNo() {
+        return this.flightNo;
+    }
+
+    public String getSeatNo() {
+        return this.seatNo;
+    }
+
+    public double getTotalBaggageWeight() {
+        return this.noOfBags * this.weightOfEachBag;
+    }
+
+
 }
 
