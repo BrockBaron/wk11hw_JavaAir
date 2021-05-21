@@ -25,7 +25,7 @@ public class FlightCrewTest {
     }
 
     @Test
-    public void flighCrewHasRank() {
+    public void flightCrewHasRank() {
         assertEquals(Rank.CAPTAIN, pilot.getRank());
     }
 
