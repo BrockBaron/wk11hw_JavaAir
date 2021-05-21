@@ -3,15 +3,23 @@ package People;
 public class Passenger extends Person {
 
     private int noOfBags;
-    private double weightOfBag;
+    private double weightOfBags;
     private String flightNo;
-    private int seatNo;
+    private String seatNo;
 
-    public Passenger(String name, int noOfBags, double weightOfBag, String flightNo, int seatNo) {
+    public Passenger(String name, int noOfBags, double weightOfBags, String flightNo, String seatNo) {
         super(name);
         this.noOfBags = noOfBags;
-        this.weightOfBag = weightOfBag;
+        this.weightOfBags = weightOfBags;
         this.flightNo = flightNo;
         this.seatNo = seatNo;
     }
+
+//    total weight of luggage
+
+//    hand luggage
+
+
+
 }
+

@@ -50,7 +50,7 @@ public class AircraftTest {
 
     @Test
     public void aircraftHasCargoCapacity() {
-        assertEquals(54.4, aircraft.getLuggageCapacity(), 0.1);
+        assertEquals(55.0, aircraft.getLuggageCapacity(), 0.1);
     }
 
     @Test

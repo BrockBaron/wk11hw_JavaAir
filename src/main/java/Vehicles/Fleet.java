@@ -2,10 +2,10 @@ package Vehicles;
 
 public enum Fleet {
 
-    BRITTENNI("Twin-TurboProp", 2, 0, 8, 54.4),
-    TWINOTTER("Twin-TurboProp", 2, 1, 19, 627.0),
+    BRITTENNI("Twin-TurboProp", 2, 0, 8, 55.0),
+    TWINOTTER("Twin-TurboProp", 2, 1, 19, 726.00),
     EMBREARJ135("Jet",2, 2,37, 1353.0),
-    JETSTREAM41("Jet", 4, 2,29, 957.0 );
+    JETSTREAM41("Jet", 2, 2,29, 1056.0 );
 
     private final String propulsionType;
     private final int flightCrewCap;
