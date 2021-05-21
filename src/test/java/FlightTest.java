@@ -56,7 +56,7 @@ public class FlightTest {
         purser = new CabinCrew("Richard Branson", Rank.PURSER);
         flightAttendant = new CabinCrew("Shia LeBuff", Rank.ATTENDANT);
 
-        aircraft = new Aircraft(Fleet.TWINOTTER,"G-JMAC" );
+        aircraft = new Aircraft(Fleet.TWINOTTER,"G-JMAC");
         flightNo = "LM0397";
 
         destination = "EDI";
@@ -72,7 +72,7 @@ public class FlightTest {
 
         flight.addPassenger(passenger1);
 
-        passenger1 = new Passenger("Stan Smith", 2, 12.50, flightNo, "A1");
+        passenger1 = new Passenger("Stan Smith", 2, 12.50, flightNo, 1);
 
     }
 

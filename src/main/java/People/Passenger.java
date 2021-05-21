@@ -5,9 +5,9 @@ public class Passenger extends Person {
     private int noOfBags;
     private double weightOfEachBag;
     private String flightNo;
-    private String seatNo;
+    private int seatNo;
 
-    public Passenger(String name, int noOfBags, double weightOfEachBag, String flightNo, String seatNo) {
+    public Passenger(String name, int noOfBags, double weightOfEachBag, String flightNo, int seatNo) {
         super(name);
         this.noOfBags = noOfBags;
         this.weightOfEachBag = weightOfEachBag;
@@ -27,7 +27,7 @@ public class Passenger extends Person {
         return this.flightNo;
     }
 
-    public String getSeatNo() {
+    public int getSeatNo() {
         return this.seatNo;
     }
 
