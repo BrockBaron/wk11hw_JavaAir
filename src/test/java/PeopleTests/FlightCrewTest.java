@@ -15,7 +15,7 @@ public class FlightCrewTest {
     @Before
     public void before() {
         pilot = new FlightCrew("Cptn. Jeffry Striker", Rank.CAPTAIN, "STRIK711269JS6XX");
-//        coPilot = new FlightCrew("Shane Byrne", Rank.FO, "BYRNE812128SB7FE");
+        coPilot = new FlightCrew("Shane Byrne", Rank.FO, "BYRNE812128SB7FE");
 
     }
 
@@ -38,4 +38,13 @@ public class FlightCrewTest {
     public void pilotCanFlyAircraft() {
         assertEquals("I drive the coach, yes?!", pilot.getFlyAircraft());
     }
+
+    @Test
+    public void coPilotToTheRescue() {
+        assertEquals("I'll save you!", coPilot.getMayDay());
+    }
+
+
 }
+
+
