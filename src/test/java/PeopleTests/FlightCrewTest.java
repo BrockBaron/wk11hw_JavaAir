@@ -17,6 +17,7 @@ public class FlightCrewTest {
         pilot = new FlightCrew("Cptn. Jeffry Striker", Rank.CAPTAIN, "STRIK711269JS6XX");
         coPilot = new FlightCrew("Shane Byrne", Rank.FO, "BYRNE812128SB7FE");
 
+
     }
 
     @Test

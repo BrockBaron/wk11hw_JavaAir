@@ -8,19 +8,20 @@ import java.util.ArrayList;
 public class Flight {
 
 
-    private ArrayList<FlightCrew> flightCrew;
-    private ArrayList<CabinCrew> cabinCrew;
-    private ArrayList<Passenger> passenger;
+    private ArrayList<FlightCrew> flightCrews;
+    private ArrayList<CabinCrew> cabinCrews;
+    private ArrayList<Passenger> passengers;
+
     private Aircraft aircraft;
     private String flightNo;
     private String destination;
     private String departure;
     private String departureTime;
 
-    public Flight(ArrayList<FlightCrew> flightCrew, ArrayList<CabinCrew> cabinCrew, ArrayList<Passenger> passenger, Aircraft aircraft, String flightNo, String destination, String departure, String departureTime) {
-        this.flightCrew = new ArrayList<>();
-        this.cabinCrew = new ArrayList<>();
-        this.passenger = new ArrayList<>();
+    public Flight() {
+        this.flightCrews = new ArrayList<>();
+        this.cabinCrews = new ArrayList<>();
+        this.passengers = new ArrayList<>();
         this.aircraft = aircraft;
         this.flightNo = flightNo;
         this.destination = destination;
@@ -28,6 +29,39 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-//    add passenger to flight
-//    calculate available seats
+
+    public void addFlightCrew(FlightCrew flightCrew) {
+        this.flightCrews.add(flightCrew);
+    }
+
+    public void addCabinCrew(CabinCrew cabinCrew) {
+        this.cabinCrews.add(cabinCrew);
+        }
+
+    public void addPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
+    }
+
 }
+
+
+
+
+
+
+
+
+    //    add passenger to flightList
+
+//    add flight crew personnel to Array list
+//    add cabin crew personnel to array list
+
+
+//    calculate available seats
+//    return
+//    aircraft.getPaxCapacity() - passengerCount
+
+
+
+
+
