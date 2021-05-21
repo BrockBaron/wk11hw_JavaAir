@@ -17,13 +17,11 @@ public class AircraftTest {
     @Before
 
     public void before() {
-        aircraft = new Aircraft(Fleet.BRITTENNI);
-        aircraft1 = new Aircraft(Fleet.TWINOTTER);
-        aircraft2 = new Aircraft(Fleet.EMBREARJ135);
-        aircraft3 = new Aircraft(Fleet.JETSTREAM41);
+        aircraft = new Aircraft(Fleet.BRITTENNI, "G-BJEC");
+        aircraft1 = new Aircraft(Fleet.TWINOTTER, "VP-FAZ");
+        aircraft2 = new Aircraft(Fleet.EMBREARJ135, "G-SUGR");
+        aircraft3 = new Aircraft(Fleet.JETSTREAM41,"G-JMAC" );
     }
-
-
 
     @Test
     public void canGetFleetType() {
@@ -48,5 +46,10 @@ public class AircraftTest {
     @Test
     public void aircraftHasCargoCapacity() {
         assertEquals(54.4, aircraft.getLuggageCapacity(), 0.1);
+    }
+
+    @Test
+    public void aircraftHasCallSignal() {
+        assertEquals("G-JMAC", aircraft3.getCallSign());
     }
 }

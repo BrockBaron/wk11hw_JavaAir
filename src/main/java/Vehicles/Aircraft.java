@@ -3,9 +3,11 @@ package Vehicles;
 public class Aircraft {
 
     private Fleet fleet;
+    private String callSign;
 
-    public Aircraft(Fleet fleet) {
+    public Aircraft(Fleet fleet, String callSign) {
         this.fleet = fleet;
+        this.callSign = callSign;
     }
 
     public Fleet getFleet() {
@@ -31,5 +33,9 @@ public class Aircraft {
 
     public double getLuggageCapacity() {
         return this.fleet.getLuggageCap();
+    }
+
+    public String getCallSign() {
+        return this.callSign;
     }
 }
