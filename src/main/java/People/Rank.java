@@ -2,6 +2,7 @@ package People;
 
 public enum Rank {
     CAPTAIN("Captain"),
+    SFO("Snr. First Officer"),
     FO("First Officer"),
     PURSER("Purser"),
     ATTENDANT("Flight Attendant");
