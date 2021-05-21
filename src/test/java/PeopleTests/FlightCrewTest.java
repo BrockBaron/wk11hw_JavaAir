@@ -20,17 +20,17 @@ public class FlightCrewTest {
     }
 
     @Test
-    public void pilotHasName() {
+    public void flightCrewHasName() {
         assertEquals("Cptn. Jeffry Striker",pilot.getName());
     }
 
     @Test
-    public void pilotHasRank() {
+    public void flighCrewHasRank() {
         assertEquals(Rank.CAPTAIN, pilot.getRank());
     }
 
     @Test
-    public void pilotHasLicense() {
+    public void flightCrewHasLicense() {
         assertEquals("STRIK711269JS6XX", pilot.getLicense());
     }
 
