@@ -48,14 +48,17 @@ public class FlightTest {
 
     @Before
     public void before() {
-        flight = new Flight();
+        flight = new Flight(aircraft, flightNo, destination, departure, departureTime);
 
         pilot = new FlightCrew("Cptn. Jeffry Striker", Rank.CAPTAIN, "STRIK711269JS6XX");
         coPilot = new FlightCrew("Shane Byrne", Rank.SFO, "BYRNE812128SB7FE");
+
         purser = new CabinCrew("Richard Branson", Rank.PURSER);
         flightAttendant = new CabinCrew("Shia LeBuff", Rank.ATTENDANT);
+
         aircraft = new Aircraft(Fleet.TWINOTTER,"G-JMAC" );
         flightNo = "LM0397";
+
         destination = "EDI";
         departure = "KOI";
         departureTime = "11:58";
