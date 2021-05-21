@@ -18,11 +18,12 @@ public class FlightCrew extends Person{
         return this.rank;
     }
 
-    public String getLicenceNo() {
+    public String getLicense() {
         return licenceNo;
     }
 
     public String getFlyAircraft() {
         return flyAircraft;
     }
+
 }

@@ -15,7 +15,7 @@ public class FlightCrewTest {
     @Before
     public void before() {
         pilot = new FlightCrew("Cptn. Jeffry Striker", Rank.CAPTAIN, "STRIK711269JS6XX");
-        coPilot = new FlightCrew("Shane Byrne", Rank.FO, "BYRNE812128SB7FE");
+//        coPilot = new FlightCrew("Shane Byrne", Rank.FO, "BYRNE812128SB7FE");
 
     }
 
@@ -27,5 +27,15 @@ public class FlightCrewTest {
     @Test
     public void pilotHasRank() {
         assertEquals(Rank.CAPTAIN, pilot.getRank());
+    }
+
+    @Test
+    public void pilotHasLicense() {
+        assertEquals("STRIK711269JS6XX", pilot.getLicense());
+    }
+
+    @Test
+    public void pilotCanFlyAircraft() {
+        assertEquals("I drive the coach, yes?!", pilot.getFlyAircraft());
     }
 }
