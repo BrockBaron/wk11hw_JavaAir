@@ -39,7 +39,7 @@ public class PassengerTest {
 
     @Test
     public void passengerHasSeatNo() {
-        assertEquals("8D",passenger.getSeatNo());
+        assertEquals(8 ,passenger.getSeatNo());
     }
 
     @Test
