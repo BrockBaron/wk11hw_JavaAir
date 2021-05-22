@@ -30,21 +30,7 @@ public class Flight {
     }
 
 
-    public void addFlightCrew(FlightCrew flightCrew) {
-        this.flightCrews.add(flightCrew);
-    }
 
-    public void addCabinCrew(CabinCrew cabinCrew) {
-        this.cabinCrews.add(cabinCrew);
-        }
-
-    public void addPassenger(Passenger passenger) {
-        this.passengers.add(passenger);
-    }
-
-    public String getAircraft() {
-        return aircraft.getAircraftType();
-    }
 
     public String getFlightNo() {
         return flightNo;
@@ -62,6 +48,26 @@ public class Flight {
         return departureTime;
     }
 
+    public String getAircraft() {
+        return aircraft.getAircraftType();
+    }
+
+
+
+    public int getPaxCapacity() {
+        return aircraft.getCabinCrewCapacity();
+    }
+
+
+
+
+
+
+
+
+    public void addPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
+    }
 
 
 }

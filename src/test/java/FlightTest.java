@@ -78,14 +78,6 @@ public class FlightTest {
         departureTime = "11:58";
 
 
-//        flight.addFlightCrew(pilot);
-//        flight.addFlightCrew(coPilot);
-//
-//        flight.addCabinCrew(purser);
-//        flight.addCabinCrew(purser);
-
-//
-
         passenger1 = new Passenger("Stan Smith", 2, 12.50, flightNo, 1);
         passenger2 = new Passenger("Piers Neal", 1, 10.50, flightNo, 2);
         passenger3 = new Passenger("Yvette Vasquez", 3, 8.50, flightNo, 3);
@@ -158,15 +150,18 @@ public class FlightTest {
         assertEquals("11:58", flight.getDepartureTime());
     }
 
+
+
+
     // get capacity of people specified for aircraft
     @Test
     public void canReturnPaxCapacity() {
-        assertEquals(19, aircraft.getPaxCapacity());
+        assertEquals(19, flight.getPaxCapacity());
     }
-//    @Test
-//    public void canReturnFlightCrewCapacity() {
-//        assertEquals(2, aircraft.getFlightCrewCapacity());
-//    }
+    @Test
+    public void canReturnFlightCrewCapacity() {
+        assertEquals(2, aircraft.getFlightCrewCapacity());
+    }
 //    @Test
 //    public void canReturnCabinCrewCapacity() {
 //        assertEquals(2, aircraft.getCabinCrewCapacity());
