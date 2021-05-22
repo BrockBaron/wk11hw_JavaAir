@@ -181,10 +181,14 @@ public class FlightTest {
         assertEquals(19, flight.getPaxCount());
     }
 
-//    @Test
-//    public void calculateAvailablePaxCapacity() {
-//        assertEquals(0, flight.getAvailablePaxCapacity());
-//    }
 
+    @Test
+    public void calculateAvailablePaxCapacity() {
+        assertEquals(0, flight.getAvailablePaxCapacity());
+    }
 
+    @Test
+    public void hasCapacity() {
+        assertEquals(false, flight.hasCapacity());
+    }
 }

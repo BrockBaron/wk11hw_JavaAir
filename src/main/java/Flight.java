@@ -77,23 +77,23 @@ public class Flight {
     }
 
 
+    public int getAvailablePaxCapacity() {
+        return this.getPaxCount() - this.getPaxCapacity();
+    }
 
-
-
-
-
-
-
-
-
-
-
+    public boolean hasCapacity() {
+        return this.getPaxCount() < this.getPaxCapacity();
+    }
 
 
 
     public void addPassenger(Passenger passenger) {
             this.passengers.add(passenger);
     }
+
+
+
+
 //
 //    public void addBook(Book book) {
 //        if (hasCapacity()) {
