@@ -55,7 +55,7 @@ public class Flight {
 
 
     public int getPaxCapacity() {
-        return aircraft.getCabinCrewCapacity();
+        return aircraft.getPaxCapacity();
     }
 
 

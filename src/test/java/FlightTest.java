@@ -162,10 +162,10 @@ public class FlightTest {
     public void canReturnFlightCrewCapacity() {
         assertEquals(2, flight.getFlightCrewCapacity());
     }
-//    @Test
-//    public void canReturnCabinCrewCapacity() {
-//        assertEquals(2, aircraft.getCabinCrewCapacity());
-//    }
+    @Test
+    public void canReturnCabinCrewCapacity() {
+        assertEquals(2, flight.getCabinCrewCapacity());
+    }
 //
 ////add crew to aircraft and return quantity
 //    @Test
