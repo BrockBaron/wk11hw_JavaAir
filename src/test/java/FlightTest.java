@@ -121,7 +121,7 @@ public class FlightTest {
         flight.addPassenger(passenger17);
         flight.addPassenger(passenger18);
         flight.addPassenger(passenger19);
-//        flight.addPassenger(passenger20);
+        flight.addPassenger(passenger20);
 
 
     }
@@ -196,7 +196,6 @@ public class FlightTest {
 
     @Test
     public void canAddPaxToFlightOnlyIfSpace() {
-        flight.addPassenger(passenger20);
         assertEquals( 19, flight.getPaxCount());
 
     }
