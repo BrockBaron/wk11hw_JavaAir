@@ -67,7 +67,7 @@ public class FlightTest {
         purser = new CabinCrew("Richard Branson", Rank.PURSER);
         flightAttendant = new CabinCrew("Shia LeBuff", Rank.ATTENDANT);
         cabinCrew.add(purser);
-        cabinCrew.add(flightAttendant);
+//        cabinCrew.add(flightAttendant);
 
 
         aircraft = new Aircraft(Fleet.TWINOTTER, "G-JMAC");
@@ -150,9 +150,6 @@ public class FlightTest {
         assertEquals("11:58", flight.getDepartureTime());
     }
 
-
-
-
     // get capacity of people specified for aircraft
     @Test
     public void canReturnPaxCapacity() {
@@ -164,18 +161,18 @@ public class FlightTest {
     }
     @Test
     public void canReturnCabinCrewCapacity() {
-        assertEquals(2, flight.getCabinCrewCapacity());
+        assertEquals(1, flight.getCabinCrewCapacity());
     }
-//
-////add crew to aircraft and return quantity
-//    @Test
-//    public void canAddFlightCrewToAircraft() {
-//        assertEquals(2, flight.flightCrewCount());
-//    }
+
+//add crew to aircraft and return quantity
+    @Test
+    public void canAddFlightCrewToAircraft() {
+        assertEquals(2, flight.flightCrewCount());
+    }
 //
 //    @Test
 //    public void canAddCabinCrewToAircraft() {
-//        assertEquals(2, flight.cabinCrewCount());
+//        assertEquals(1, flight.cabinCrewCount());
 //    }
 //
 //

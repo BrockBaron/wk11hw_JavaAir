@@ -63,7 +63,9 @@ public class Flight {
         return aircraft.getFlightCrewCapacity();
     }
 
-
+    public int getCabinCrewCapacity() {
+        return this.aircraft.getCabinCrewCapacity();
+    }
 
 
 
@@ -72,6 +74,9 @@ public class Flight {
     }
 
 
+    public int flightCrewCount() {
+        return this.flightCrews.size();
+    }
 }
 
 
