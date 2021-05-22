@@ -38,6 +38,7 @@ public class Passenger extends Person {
         return randomNumber.ints(min, (max + 1)).limit(1).findFirst().getAsInt();
     }
     public int getSeatNo() {
+//        return this.seatNo;
 
         return getRandomNumberInRange(0, aircraft.getPaxCapacity());
     }
