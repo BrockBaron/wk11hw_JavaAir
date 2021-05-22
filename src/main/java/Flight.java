@@ -77,6 +77,10 @@ public class Flight {
     public int flightCrewCount() {
         return this.flightCrews.size();
     }
+
+    public int cabinCrewCount() {
+        return this.cabinCrews.size();
+    }
 }
 
 

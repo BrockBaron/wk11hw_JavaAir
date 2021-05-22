@@ -169,11 +169,11 @@ public class FlightTest {
     public void canAddFlightCrewToAircraft() {
         assertEquals(2, flight.flightCrewCount());
     }
-//
-//    @Test
-//    public void canAddCabinCrewToAircraft() {
-//        assertEquals(1, flight.cabinCrewCount());
-//    }
+
+    @Test
+    public void canAddCabinCrewToAircraft() {
+        assertEquals(1, flight.cabinCrewCount());
+    }
 //
 //
 }
