@@ -76,7 +76,6 @@ public class Flight {
         return this.passengers.size();
     }
 
-
     public int getAvailablePaxCapacity() {
         return this.getPaxCount() - this.getPaxCapacity();
     }
@@ -85,41 +84,14 @@ public class Flight {
         return this.getPaxCount() < this.getPaxCapacity();
     }
 
-
-
     public void addPassenger(Passenger passenger) {
+        if (hasCapacity()){
             this.passengers.add(passenger);
+        }
     }
-
-
-
-
-//
-//    public void addBook(Book book) {
-//        if (hasCapacity()) {
-//            this.collection.add(book);
-//            this.addToGenreHashmap(book);
-//        }
-//    }
-
-
 }
 
 
-
-
-
-
-
-
-
-    //    add passenger to flightList
-
-
-
-//    calculate available seats
-//    return
-//    aircraft.getPaxCapacity() - passengerCount
 
 
 

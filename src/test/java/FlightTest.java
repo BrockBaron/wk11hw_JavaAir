@@ -10,6 +10,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 
 public class FlightTest {
@@ -189,6 +190,14 @@ public class FlightTest {
 
     @Test
     public void hasCapacity() {
-        assertEquals(false, flight.hasCapacity());
+        assertFalse(flight.hasCapacity());
+    }
+
+
+    @Test
+    public void canAddPaxToFlightOnlyIfSpace() {
+        flight.addPassenger(passenger20);
+        assertEquals( 19, flight.getPaxCount());
+
     }
 }
