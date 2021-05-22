@@ -59,7 +59,9 @@ public class Flight {
     }
 
 
-
+    public int getFlightCrewCapacity() {
+        return aircraft.getFlightCrewCapacity();
+    }
 
 
 

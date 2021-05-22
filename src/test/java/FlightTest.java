@@ -160,7 +160,7 @@ public class FlightTest {
     }
     @Test
     public void canReturnFlightCrewCapacity() {
-        assertEquals(2, aircraft.getFlightCrewCapacity());
+        assertEquals(2, flight.getFlightCrewCapacity());
     }
 //    @Test
 //    public void canReturnCabinCrewCapacity() {
