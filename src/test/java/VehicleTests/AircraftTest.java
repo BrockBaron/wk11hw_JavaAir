@@ -29,6 +29,12 @@ public class AircraftTest {
     }
 
     @Test
+    public void aircraftHasType() {
+        assertEquals("Embrear J135", aircraft2.getAircraftType());
+    }
+
+
+    @Test
     public void aircraftHasPropulsionType() {
         assertEquals("Jet", aircraft2.getPropulsionType());
     }

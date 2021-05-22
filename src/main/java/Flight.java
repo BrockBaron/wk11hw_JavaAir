@@ -18,9 +18,9 @@ public class Flight {
     private String departure;
     private String departureTime;
 
-    public Flight(Aircraft aircraft, String flightNo, String destination, String departure, String departureTime) {
-        this.flightCrews = new ArrayList<>();
-        this.cabinCrews = new ArrayList<>();
+    public Flight(ArrayList<FlightCrew> flightCrews,ArrayList<CabinCrew> cabinCrews, Aircraft aircraft, String flightNo, String destination, String departure, String departureTime) {
+        this.flightCrews = flightCrews;
+        this.cabinCrews = cabinCrews;
         this.passengers = new ArrayList<>();
         this.aircraft = aircraft;
         this.flightNo = flightNo;
@@ -41,6 +41,28 @@ public class Flight {
     public void addPassenger(Passenger passenger) {
         this.passengers.add(passenger);
     }
+
+    public String getAircraft() {
+        return aircraft.getAircraftType();
+    }
+
+    public String getFlightNo() {
+        return flightNo;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public String getDeparture() {
+        return departure;
+    }
+
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
+
 
 }
 

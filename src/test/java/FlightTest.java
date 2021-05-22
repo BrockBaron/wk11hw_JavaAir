@@ -7,6 +7,8 @@ import Vehicles.Fleet;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 
@@ -49,18 +51,26 @@ public class FlightTest {
     Passenger passenger19;
     Passenger passenger20;
 
+    ArrayList<FlightCrew> flightCrew;
+    ArrayList<CabinCrew> cabinCrew;
 
     @Before
     public void before() {
-        flight = new Flight(aircraft, flightNo, destination, departure, departureTime);
 
+        flightCrew = new ArrayList<>();
         pilot = new FlightCrew("Cptn. Jeffry Striker", Rank.CAPTAIN, "STRIK711269JS6XX");
         coPilot = new FlightCrew("Shane Byrne", Rank.SFO, "BYRNE812128SB7FE");
+        flightCrew.add(pilot);
+        flightCrew.add(coPilot);
 
+        cabinCrew = new ArrayList<>();
         purser = new CabinCrew("Richard Branson", Rank.PURSER);
         flightAttendant = new CabinCrew("Shia LeBuff", Rank.ATTENDANT);
+        cabinCrew.add(purser);
+        cabinCrew.add(flightAttendant);
 
-        aircraft = new Aircraft(Fleet.TWINOTTER,"G-JMAC");
+
+        aircraft = new Aircraft(Fleet.TWINOTTER, "G-JMAC");
         flightNo = "LM0397";
 
         destination = "EDI";
@@ -68,13 +78,13 @@ public class FlightTest {
         departureTime = "11:58";
 
 
-        flight.addFlightCrew(pilot);
-        flight.addFlightCrew(coPilot);
+//        flight.addFlightCrew(pilot);
+//        flight.addFlightCrew(coPilot);
+//
+//        flight.addCabinCrew(purser);
+//        flight.addCabinCrew(purser);
 
-        flight.addCabinCrew(purser);
-        flight.addCabinCrew(purser);
-
-        flight.addPassenger(passenger1);
+//
 
         passenger1 = new Passenger("Stan Smith", 2, 12.50, flightNo, 1);
         passenger2 = new Passenger("Piers Neal", 1, 10.50, flightNo, 2);
@@ -97,11 +107,35 @@ public class FlightTest {
         passenger19 = new Passenger("Duncan Black", 0, 12.50, flightNo, 19);
         passenger20 = new Passenger("Truman Poole", 3, 14.50, flightNo, 19);
 
+        flight = new Flight(flightCrew, cabinCrew, aircraft, flightNo, destination, departure, departureTime);
+
+        flight.addPassenger(passenger1);
+        flight.addPassenger(passenger2);
+        flight.addPassenger(passenger3);
+        flight.addPassenger(passenger4);
+        flight.addPassenger(passenger5);
+        flight.addPassenger(passenger6);
+        flight.addPassenger(passenger7);
+        flight.addPassenger(passenger8);
+        flight.addPassenger(passenger9);
+        flight.addPassenger(passenger10);
+        flight.addPassenger(passenger11);
+        flight.addPassenger(passenger12);
+        flight.addPassenger(passenger13);
+        flight.addPassenger(passenger14);
+        flight.addPassenger(passenger15);
+        flight.addPassenger(passenger16);
+        flight.addPassenger(passenger17);
+        flight.addPassenger(passenger18);
+        flight.addPassenger(passenger19);
+//        flight.addPassenger(passenger20);
+
+
     }
 
     @Test
-    public void canGetAircraftType() {
-        assertEquals(Fleet.TWINOTTER, aircraft.getFleetType());
+    public void canGetAircraft() {
+        assertEquals("Twin Otter", flight.getAircraft());
     }
 
     @Test
@@ -124,30 +158,30 @@ public class FlightTest {
         assertEquals("11:58", flight.getDepartureTime());
     }
 
-// get capacity of people specified for aircraft
+    // get capacity of people specified for aircraft
     @Test
     public void canReturnPaxCapacity() {
         assertEquals(19, aircraft.getPaxCapacity());
     }
-    @Test
-    public void canReturnFlightCrewCapacity() {
-        assertEquals(2, aircraft.getFlightCrewCapacity());
-    }
-    @Test
-    public void canReturnCabinCrewCapacity() {
-        assertEquals(2, aircraft.getCabinCrewCapacity());
-    }
-
-//add crew to aircraft and return quantity
-    @Test
-    public void canAddFlightCrewToAircraft() {
-        assertEquals(2, flight.flightCrewCount());
-    }
-
-    @Test
-    public void canAddCabinCrewToAircraft() {
-        assertEquals(2, flight.cabinCrewCount());
-    }
-
-
+//    @Test
+//    public void canReturnFlightCrewCapacity() {
+//        assertEquals(2, aircraft.getFlightCrewCapacity());
+//    }
+//    @Test
+//    public void canReturnCabinCrewCapacity() {
+//        assertEquals(2, aircraft.getCabinCrewCapacity());
+//    }
+//
+////add crew to aircraft and return quantity
+//    @Test
+//    public void canAddFlightCrewToAircraft() {
+//        assertEquals(2, flight.flightCrewCount());
+//    }
+//
+//    @Test
+//    public void canAddCabinCrewToAircraft() {
+//        assertEquals(2, flight.cabinCrewCount());
+//    }
+//
+//
 }

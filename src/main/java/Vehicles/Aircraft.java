@@ -18,6 +18,10 @@ public class Aircraft {
         return this.fleet;
     }
 
+    public String getAircraftType(){
+        return this.fleet.getAircraftType();
+    }
+
     public String getPropulsionType() {
         return this.fleet.getPropulsionType();
     }
