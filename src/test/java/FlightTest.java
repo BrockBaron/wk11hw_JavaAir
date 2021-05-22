@@ -7,6 +7,8 @@ import Vehicles.Fleet;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 
 public class FlightTest {
 
@@ -98,6 +100,54 @@ public class FlightTest {
     }
 
     @Test
-    public void name() {
+    public void canGetAircraftType() {
+        assertEquals(Fleet.TWINOTTER, aircraft.getFleetType());
     }
+
+    @Test
+    public void flightHasFlightNo() {
+        assertEquals("LM0397", flight.getFlightNo());
+    }
+
+    @Test
+    public void flightHasDestination() {
+        assertEquals("EDI", flight.getDestination());
+    }
+
+    @Test
+    public void flightHasDeparture() {
+        assertEquals("KOI", flight.getDeparture());
+    }
+
+    @Test
+    public void flightHasDepartureTime() {
+        assertEquals("11:58", flight.getDepartureTime());
+    }
+
+// get capacity of people specified for aircraft
+    @Test
+    public void canReturnPaxCapacity() {
+        assertEquals(19, aircraft.getPaxCapacity());
+    }
+    @Test
+    public void canReturnFlightCrewCapacity() {
+        assertEquals(2, aircraft.getFlightCrewCapacity());
+    }
+    @Test
+    public void canReturnCabinCrewCapacity() {
+        assertEquals(2, aircraft.getCabinCrewCapacity());
+    }
+
+//add crew to aircraft and return quantity
+    @Test
+    public void canAddFlightCrewToAircraft() {
+        assertEquals(2, flight.flightCrewCount());
+    }
+
+    @Test
+    public void canAddCabinCrewToAircraft() {
+        assertEquals(2, flight.cabinCrewCount());
+    }
+
+
 }
