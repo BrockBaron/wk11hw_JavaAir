@@ -174,6 +174,17 @@ public class FlightTest {
     public void canAddCabinCrewToAircraft() {
         assertEquals(1, flight.cabinCrewCount());
     }
-//
-//
+
+    // booking check
+    @Test
+    public void passengerCountOnboard() {
+        assertEquals(19, flight.getPaxCount());
+    }
+
+//    @Test
+//    public void calculateAvailablePaxCapacity() {
+//        assertEquals(0, flight.getAvailablePaxCapacity());
+//    }
+
+
 }

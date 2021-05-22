@@ -18,7 +18,7 @@ public class Flight {
     private String departure;
     private String departureTime;
 
-    public Flight(ArrayList<FlightCrew> flightCrews,ArrayList<CabinCrew> cabinCrews, Aircraft aircraft, String flightNo, String destination, String departure, String departureTime) {
+    public Flight(ArrayList<FlightCrew> flightCrews, ArrayList<CabinCrew> cabinCrews, Aircraft aircraft, String flightNo, String destination, String departure, String departureTime) {
         this.flightCrews = flightCrews;
         this.cabinCrews = cabinCrews;
         this.passengers = new ArrayList<>();
@@ -28,8 +28,6 @@ public class Flight {
         this.departure = departure;
         this.departureTime = departureTime;
     }
-
-
 
 
     public String getFlightNo() {
@@ -53,7 +51,6 @@ public class Flight {
     }
 
 
-
     public int getPaxCapacity() {
         return aircraft.getPaxCapacity();
     }
@@ -67,13 +64,6 @@ public class Flight {
         return this.aircraft.getCabinCrewCapacity();
     }
 
-
-
-    public void addPassenger(Passenger passenger) {
-        this.passengers.add(passenger);
-    }
-
-
     public int flightCrewCount() {
         return this.flightCrews.size();
     }
@@ -81,7 +71,40 @@ public class Flight {
     public int cabinCrewCount() {
         return this.cabinCrews.size();
     }
+
+    public int getPaxCount() {
+        return this.passengers.size();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void addPassenger(Passenger passenger) {
+            this.passengers.add(passenger);
+    }
+//
+//    public void addBook(Book book) {
+//        if (hasCapacity()) {
+//            this.collection.add(book);
+//            this.addToGenreHashmap(book);
+//        }
+//    }
+
+
 }
+
 
 
 
@@ -92,8 +115,6 @@ public class Flight {
 
     //    add passenger to flightList
 
-//    add flight crew personnel to Array list
-//    add cabin crew personnel to array list
 
 
 //    calculate available seats
