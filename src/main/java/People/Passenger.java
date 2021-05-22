@@ -1,5 +1,9 @@
 package People;
 
+import Vehicles.Aircraft;
+
+import java.util.Random;
+
 public class Passenger extends Person {
 
     private int noOfBags;
@@ -27,9 +31,19 @@ public class Passenger extends Person {
         return this.flightNo;
     }
 
-    public int getSeatNo() {
-        return this.seatNo;
+
+    public int getRandomNumberInRange(int min, int max) {
+
+        Random randomNumber = new Random();
+        return randomNumber.ints(min, (max + 1)).limit(1).findFirst().getAsInt();
     }
+    public int getSeatNo() {
+
+        return getRandomNumberInRange(0, aircraft.getPaxCapacity());
+    }
+
+
+
 
     public double getTotalBaggageWeight() {
         return this.noOfBags * this.weightOfEachBag;
