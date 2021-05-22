@@ -1,0 +1,195 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "People.Passenger"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1907941713 { 
+   	label=People
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   CabinCrew1907941713[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CabinCrew</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   name: Person [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   rank: Rank [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ alightWarning(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ sellScratchys(): String</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+FlightCrew1907941713[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)FlightCrew</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   flyAircraft: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   licenceNo: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   mayday: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   rank: Rank [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Passenger1907941713[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Passenger</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   flightNo: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   noOfBags: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   seatNo: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   weightOfEachBag: double [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ baggageCount(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ baggageWeight(): double</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Person1907941713[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Person</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_2107011216 { 
+   	label=Flight
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   Flight2107011216[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Flight</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   aircraft: Aircraft [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   cabinCrews: ArrayList&lt;CabinCrew&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   departure: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   departureTime: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   destination: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   flightCrews: ArrayList&lt;FlightCrew&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   flightNo: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   passengers: ArrayList&lt;Passenger&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addCabinCrew(cabinCrew: CabinCrew)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addFlightCrew(flightCrew: FlightCrew)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ addPassenger(passenger: Passenger)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+'edges    
+CabinCrew1907941713 -> Person1907941713[label="name
+[0..1]"];
+Flight2107011216 -> CabinCrew1907941713[label="cabinCrews
+[0..*]"];
+Flight2107011216 -> FlightCrew1907941713[label="flightCrews
+[0..*]"];
+Flight2107011216 -> Passenger1907941713[label="passengers
+[0..*]"];
+Person1907941713 -> CabinCrew1907941713[arrowhead=none, arrowtail=empty, dir=both];
+Person1907941713 -> FlightCrew1907941713[arrowhead=none, arrowtail=empty, dir=both];
+Person1907941713 -> Passenger1907941713[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
